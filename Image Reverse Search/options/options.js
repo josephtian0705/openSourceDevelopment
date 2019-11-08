@@ -373,5 +373,21 @@ function updateUI(storedSettings) {
 	}
 }
 
+function handleFileSelect(evt) {
+	// var files = toBase64(evt.target.files); // FileList object
+	var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+	    *******************************************************************
+    }
+  }
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
 /* On opening the options page, fetch stored settings and update the UI with them. */
 chrome.storage.sync.get(null, updateUI);
