@@ -59,3 +59,26 @@ function fetchBookmarks() {
     }
 
 }
+
+function deleteBookmark(url) {
+    //get bookmarks from local storage
+
+    console.log(url);
+
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+    for (var i = 0; i < bookmarks.length; i++) {
+        if (bookmarks[i].url == url) {
+            //remove from array
+            bookmarks.splice(i, 1);
+        }
+    }
+
+    //reset back to local storage
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+    //re-fetch bookmarks
+    fetchBookmarks();
+
+}
+
