@@ -39,3 +39,23 @@ function saveBookmark(e) {
 
 }
 
+function fetchBookmarks() {
+
+    //Get bookmarks from LocalStorage
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    var displayBookmark = document.getElementById('displayBookmark');
+
+    displayBookmark.innerHTML = '';
+
+    for (var i = 0; i < bookmarks.length; i++) {
+
+        var name = bookmarks[i].name;
+        var url = bookmarks[i].url;
+
+        displayBookmark.innerHTML += '<h3>' + name + '</h3>' +
+            '<a href="' + url + '">' + '<button>Visit</button>' + '</a>' +
+            '<a href="#" onclick="deleteBookmark(\'' + url + '\')"><button>Delete</button></a>';
+
+    }
+
+}
