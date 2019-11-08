@@ -82,3 +82,23 @@ function deleteBookmark(url) {
 
 }
 
+function validateForm(bookmarkName, bookmarkURL) {
+
+    if (!bookmarkName && !bookmarkURL) {
+
+        alert('Please fill in all the field!');
+        return false;
+    }
+
+    //to validate the URL
+    var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression);
+
+    if (!bookmarkURL.match(regex)) {
+        alert('Please use a valid URL!');
+        return false;
+    }
+
+    return true;
+}
+
