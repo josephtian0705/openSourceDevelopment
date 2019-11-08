@@ -237,7 +237,13 @@ function createSearchProviderElement(name = '', icon = 'icons/other.png', url = 
 	};
 
 	spRemove.onclick = () => {
-		root.remove();
+
+		if (confirm('Are you sure you want to delete this?')) {
+			root.remove();
+		} else {
+			//Remain the same options while user click on "cancel"
+		}
+
 	};
 
 	root.appendChild(createSpCheckboxElement(selected));
