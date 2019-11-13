@@ -1,0 +1,147 @@
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1em;
+}
+
+main {
+  padding: 1rem;
+}
+
+main * {
+  font-family: sans-serif;
+}
+
+/*form*/
+.movies-form {
+  box-sizing: border-box;
+  /*width: 100%;*/
+}
+
+.movies-form > input[type="text"], .movies-form > input[type="url"]{
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: .5rem;
+  border: 1px solid rgb(207, 207, 207);
+  height: 1.3rem;
+  color: #333;
+  font-weight: bolder;
+  font-size: .75rem;
+  padding-left: .25rem;
+  padding-right: .25rem;
+}
+
+input[type="text"]:placeholder-shown, input[type="url"]:placeholder-shown {
+  font-weight: normal;
+}
+
+.movies-form > input[name="time"] {
+  width: 5rem;
+}
+
+.movies-form > input[type="submit"] {
+  right: 0;
+  bottom: 0;
+  background: #4bc24dfe;
+  border: none;
+  border-radius: 4px;
+  color: whitesmoke;
+  box-sizing: border-box;
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.movies-form > input[type="submit"]:hover {
+  background: #389a39fe;
+}
+
+.movies-form > label {
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: bolder;
+  display: block;
+  margin-bottom: .5rem;
+  color: #333;
+}
+
+/*divider*/
+
+.divider {
+  border: none;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  margin: 1rem 0;
+}
+
+/*movies*/
+
+.movies-list {
+  list-style: none;
+  width: 24rem;
+}
+
+.movies-list__movie {
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.movies-list__movie-title {
+  font-size: .75rem;
+  line-height: 1rem;
+  margin-bottom: .5rem;
+  color: #333;
+}
+
+.movies-list__movie-link {
+  color: #999999;
+  font-weight: bolder;
+  display: block;
+  word-break: break-all;
+}
+
+.movies-list__movie-time {
+  display: block;
+  margin-top: .5rem;
+}
+
+.movies-list__movie-delete {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  border: 1px solid rgb(217, 217, 217);
+  color: #c43b6a;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: .60rem;
+  height: 1.3rem;
+}
+
+.movies-list__movie-delete:hover {
+  border: 1px solid #c43b6a;
+  color: whitesmoke;
+  background: #c43b6a;
+}
+
+.error {
+  color: #c43b6a;
+  display: block;
+  margin: .5rem 0;
+}
+
+.error--hidden {
+  display: none;
+}
+
+.input--error {
+  border-color:  #c43b6a !important;
+}
