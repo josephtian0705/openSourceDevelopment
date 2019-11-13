@@ -44,6 +44,19 @@ input[type="text"]:placeholder-shown, input[type="url"]:placeholder-shown {
   width: 5rem;
 }
 
+.movies-form > input[type="reset"] {
+  right: 0;
+  bottom: 0;
+  background: #ff3300;
+  border: none;
+  border-radius: 4px;
+  color: whitesmoke;
+  box-sizing: border-box;
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
 .movies-form > input[type="submit"] {
   right: 0;
   bottom: 0;
