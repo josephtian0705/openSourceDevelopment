@@ -47,6 +47,14 @@ let load = (moviesList) => {
   });
 }
 
+function clearText()  
+{
+    document.getElementById('title').value = "";
+    document.getElementById('url').value = "";
+	document.getElementById('time').value = "";
+	
+}
+
 let save = (moviesList, movie) => {
   let checkedMovie = checkMovie(movie);
   browser.storage.local.get().then((data) => {
